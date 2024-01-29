@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    *{
+        text-align: center;
+        margin-top: 170px;
+        background-image: linear-gradient(to right,orange,white,green);
+        
+    }
+  </style>
+</head>
+<body>
+    <h1 id="Container">10</h1>
+
+    <script>
+      var container = document.getElementById("Container");
+      var count = 10;
+    
+      var intervalId = setInterval(function() {
+        if (count <= 0) {
+          container.innerHTML = "Happy Independence Day🇮🇳";
+          clearInterval(intervalId); // Stop the interval when count reaches 0
+        } else {
+          container.innerHTML = count;
+        }
+        count--;
+      }, 1000);
+    </script>
+    
+</body>
+</html>
